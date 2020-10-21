@@ -66,25 +66,24 @@ extensive = images.loc[images['extensive'] == 1][-25:]
 
 images = pd.concat([none, some, alot, substantial, extensive])
 # save all the images
-# images.apply(save_image, axis=1)
+images.apply(save_image, axis=1)
 
-# images = images.drop(columns = ['date','url','tag'])
-# images.to_csv('image-list.csv', index=False)
+images = images.drop(columns = ['date','url','tag'])
+images.to_csv('image-list.csv', index=False)
 
 
 
 
 # Get some testing images
+# none = images.loc[images['none'] == 1][:5]
+# some = images.loc[images['some'] == 1][:5]
+# alot = images.loc[images['alot'] == 1][:5]
+# substantial = images.loc[images['substantial'] == 1][:5]
+# extensive = images.loc[images['extensive'] == 1][:5]
 
-none = images.loc[images['none'] == 1][:5]
-some = images.loc[images['some'] == 1][:5]
-alot = images.loc[images['alot'] == 1][:5]
-substantial = images.loc[images['substantial'] == 1][:5]
-extensive = images.loc[images['extensive'] == 1][:5]
-
-test_images = pd.concat([none, some, alot, substantial, extensive])
+# test_images = pd.concat([none, some, alot, substantial, extensive])
 # save all the images
-test_images.apply(save_image, axis=1)
+# test_images.apply(save_image, axis=1)
 
-test_images = test_images.drop(columns = ['date','url','tag'])
-test_images.to_csv('testing-image-list.csv', index=False)
+# test_images = test_images.drop(columns = ['date','url','tag'])
+# test_images.to_csv('testing-image-list.csv', index=False)
