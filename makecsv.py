@@ -26,7 +26,7 @@ def quantify_some(row):
   return val
 
 def quantify_alot(row):
-  if row['tag'] == 'alot':
+  if row['tag'] == 'a lot':
     val = 1
   else:
     val = 0
@@ -84,7 +84,7 @@ extensive = images.loc[images['extensive'] == 1][:5]
 
 test_images = pd.concat([none, some, alot, substantial, extensive])
 # save all the images
-# test_images.apply(save_image, axis=1)
+test_images.apply(save_image, axis=1)
 
 test_images = test_images.drop(columns = ['date','url','tag'])
 test_images.to_csv('testing-image-list.csv', index=False)
