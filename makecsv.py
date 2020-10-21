@@ -83,7 +83,7 @@ extensive = images.loc[images['extensive'] == 1][:5]
 
 test_images = pd.concat([none, some, alot, substantial, extensive])
 # save all the images
-test_images.apply(save_image, axis=1)
+# test_images.apply(save_image, axis=1)
 
-# test_images = test_images.drop(columns = ['date','url','tag'])
-# test_images.to_csv('testing-image-list.csv', index=False)
+test_images = test_images.drop(columns = ['date','url','tag'])
+test_images.to_csv('testing-image-list.csv', index=False)
